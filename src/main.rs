@@ -113,7 +113,7 @@ fn compute_stats(sub_reports: &[Report]) -> DrillStats {
   }
 
   for r in sub_reports.iter() {
-    hist += (r.duration * 1_000.0) as u64;
+    hist += (r.duration_ms * 1_000.0) as u64;
   }
 
   let total_requests = sub_reports.len();
